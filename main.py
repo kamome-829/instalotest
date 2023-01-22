@@ -6,6 +6,10 @@ import schedule
 from time import sleep
 from datetime import datetime,date
 from datetime import timedelta
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
 
 
 ###################################ここからグローバル変数宣言############################
@@ -66,8 +70,8 @@ profile = ""
 posts = ""
 
 #IDとpasswordを定義
-INSTAGRAM_ID = "kamomebot11"
-INSTAGRAM_PASSWORD = "jvmp8695"
+INSTAGRAM_ID = os.getenv('INSTAGRAM_ID')
+INSTAGRAM_PASSWORD = os.getenv('INSTAGRAM_PASSWORD')
 id = "kamomebot11"
 
 #企業投稿カウント変数(常時監視変数)宣言
