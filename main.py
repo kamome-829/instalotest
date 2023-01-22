@@ -123,7 +123,7 @@ def Grantcount():
     global posts
     global profile
     loader = instaloader.Instaloader()
-    loader.login(INSTAGRAM_ID, INSTAGRAM_PASSWORD)
+    #loader.login(INSTAGRAM_ID, INSTAGRAM_PASSWORD)
     profile = instaloader.Profile.from_username(loader.context, id)
     posts = profile.get_posts()
     GrantCountset = posts.count
